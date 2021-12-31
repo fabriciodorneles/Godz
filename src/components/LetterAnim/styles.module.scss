@@ -1,0 +1,26 @@
+.mainContainer {
+  width:100%;
+  height:calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phrase {
+  font-size: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phrasePart1 {
+  width: 220px;
+}
+
+.phrasePart2 {
+  color: var(--black);
+  background: var(--white);
+  padding-right: 20px;
+}
+
+

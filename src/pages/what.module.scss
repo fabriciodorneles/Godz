@@ -1,0 +1,24 @@
+.headerContainer {
+    height:  80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav {
+      a {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width:32px;
+          height:30px;
+          transition: background-image 1s;
+          background-image: url(/images/question_icon.svg);
+          background-repeat: no-repeat;
+          &:hover {
+            background-image: url(/images/right_arrow_icon.svg);
+            filter: invert(5%) brightness(105%) contrast(105%);
+          }
+      }
+  }
+}
+
