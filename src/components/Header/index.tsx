@@ -10,7 +10,6 @@ export function Header() {
             <img src="/images/question_icon.svg" alt="ig.news" />
           </a>
           <a href="./">
-            <svg />
             <img src="/images/right_arrow_icon.svg" alt="ig.news" />
           </a>
           <a href="./">
