@@ -12,13 +12,21 @@
           width:51px;
           height:51px;
           transition: background-image 1s;
-          background-image: url(/images/question_icon_square.svg);
+          background-image: url(/images/at_icon_square.svg);
           background-repeat: no-repeat;
           &:hover {
-            background-image: url(/images/right_arrow_icon_square.svg);
+            background-image: url(/images/up_arrow_icon_square.svg);
             filter: invert(5%) brightness(105%) contrast(105%);
           }
       }
   }
+}
+
+.mainContainer {
+  width:100%;
+  height:calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

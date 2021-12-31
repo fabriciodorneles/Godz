@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { LetterAnim } from '../components/LetterAnim';
-import styles from './what.module.scss';
+import styles from './who.module.scss';
 
 export default function Home() {
   return (
@@ -10,13 +9,13 @@ export default function Home() {
       </Head>
       <header className={styles.headerContainer}>
         <nav>
-          <a href="./how">
+          <a href="./">
             {/* <img src="/images/question_icon.svg" alt="ig.news" /> */}
           </a>
         </nav>
       </header>
-      <div>
-        <LetterAnim />
+      <div className={styles.mainContainer}>
+        <img src="/images/who.svg" alt="ig.news" />
       </div>
     </>
   );
