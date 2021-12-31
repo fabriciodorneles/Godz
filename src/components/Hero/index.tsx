@@ -15,9 +15,6 @@ export function Hero() {
             <p className={styles.textSmall}> BECOME A </p>
             <p className={styles.textLarge}> GOD </p>
           </div>
-          <div className={styles.iconContainer}>
-            <img src="/images/down_arrow.png" width="40px" alt="down arrow" />
-          </div>
         </div>
       </div>
 
