@@ -1,0 +1,49 @@
+.parent {
+	display: grid;
+  width: '200px';
+  }
+
+.parent div {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.heroInsideContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 800px;
+}
+
+.heroImageContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.heroTitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 760px;
+}
+
+.textSmall {
+  font-size: 72px;
+  text-align: center;
+}
+
+.textLarge {
+  font-size: 600px;
+  text-align: center;
+  line-height: 450px;
+}
+
+.iconContainer {
+display: flex;
+justify-content: center;
+}
+
