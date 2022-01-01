@@ -30,3 +30,87 @@
   justify-content: center;
 }
 
+.containerWho {
+  border: 1px solid #2b2b2b;
+  width: 1009px;
+  height: 257px;
+  display: flex;
+}
+
+.infoWho {
+  padding-left: 40px;
+}
+
+.headerWho {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  width: 650px;
+}
+
+.idWho {
+  display: flex;
+  align-items: center;
+}
+
+.titleWho {
+  h1 {
+    font-size: 72px;
+    font-weight: 400;
+  }
+}
+
+.instaWho {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  a {
+    font-size: 36px;
+    color: #6B6B6B;
+
+    &:hover {
+      filter: invert(10%) brightness(105%) contrast(105%);
+    }
+  }
+
+}
+.twitterWho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textWho {
+  padding-top: 25px;
+  p {
+    font-size: 28px;
+  }
+
+}
+
+.divider {
+  height: 70px;
+}
+
+.neoTokyoWho {
+  padding-top: 30px;
+  p {
+    font-size: 28px;
+    color: #6B6B6B;
+    text-decoration: underline;
+  }
+}
+.commentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.millionsContainer {
+  background-color: var(--white);
+  padding: 25px;
+  p {
+    font-size: 37px;
+    color: var(--black);
+  }
+}

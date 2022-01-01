@@ -10,15 +10,26 @@ export function LetterAnim() {
         </div>
         <div className={styles.phrasePart2}>
           <TypewriterComponent
+            options={{
+              loop: true,
+            }}
             onInit={(typewriter) => {
               typewriter
+                .pauseFor(500)
                 .typeString('difícil')
                 .pauseFor(1000)
                 .deleteAll()
+                .pauseFor(500)
                 .typeString('free mint.')
                 .pauseFor(1000)
                 .deleteAll()
+                .pauseFor(500)
                 .typeString('uma jornada.')
+                .pauseFor(2000)
+                .deleteAll()
+                .pauseFor(1000)
+                .typeString('. . .')
+                .pauseFor(1000)
                 .start();
             }}
           />
