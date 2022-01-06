@@ -50,13 +50,20 @@
   padding-bottom: 110px;
 }
 
+.hiddenButton {
+  transition: color 0.2s;
+  &:hover {
+    filter: invert(20%) brightness(105%) contrast(105%);
+  }
+}
+
 .buttonG {
   width: 339px;
   height: 346px;
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-right: 100px;
+  // padding-right: 100px;
 }
 .buttonO {
   width: 352px;
@@ -67,7 +74,7 @@
   //padding-right: 80px;
 }
 .buttonD {
-  padding-left: 80px;
+  // padding-left: 80px;
   width: 329px;
   height: 342px;
   display: flex;
