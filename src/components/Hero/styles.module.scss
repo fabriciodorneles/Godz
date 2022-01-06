@@ -1,6 +1,24 @@
+.externalContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6)
+  }
+.mainContainer {
+	display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+
 .parent {
 	display: grid;
-  width: '200px';
+  width: 1490px;
+  height: 591px;
   }
 
 .parent div {
@@ -13,12 +31,46 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  height: 800px;
+  height: 591px;
+  // background-image: url(/images/bg_cernnunos.png);
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
 .heroImageContainer {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.buttonsText {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 110px;
+}
+
+.buttonG {
+  width: 339px;
+  height: 346px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-right: 100px;
+}
+.buttonO {
+  width: 352px;
+  height: 346px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  //padding-right: 80px;
+}
+.buttonD {
+  padding-left: 80px;
+  width: 329px;
+  height: 342px;
+  display: flex;
   justify-content: center;
   align-content: center;
 }
@@ -28,22 +80,12 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  height: 760px;
 }
 
 .textSmall {
   font-size: 72px;
   text-align: center;
+  padding-bottom: 60px;
 }
 
-.textLarge {
-  font-size: 600px;
-  text-align: center;
-  line-height: 450px;
-}
-
-.iconContainer {
-display: flex;
-justify-content: center;
-}
 
