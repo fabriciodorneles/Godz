@@ -107,10 +107,10 @@
 .hiddenButton {
   width: calc(40px/var(--scale));
   height: calc(40px/var(--scale));
-  transition: color 0.2s;
-  &:hover {
-    filter: invert(20%) brightness(105%) contrast(105%);
-  }
+  // transition: color 0.2s;
+  // &:hover {
+  //   filter: invert(20%) brightness(105%) contrast(105%);
+  // }
 }
 
 .buttonG {
