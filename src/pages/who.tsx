@@ -69,7 +69,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={styles.neoTokyoWho}>
-                <a href="https://opensea.io/assets/0xb668beb1fa440f6cf2da0399f8c28cab993bdd65/2162" target="_blank" rel="noreferrer">NeoTokyo Citizen #25</a>
+                <a href="https://opensea.io/assets/0xb668beb1fa440f6cf2da0399f8c28cab993bdd65/2162" target="_blank" rel="noreferrer">NeoTokyo Citizen #2162</a>
               </div>
             </div>
           </div>
