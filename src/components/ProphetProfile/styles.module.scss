@@ -1,0 +1,90 @@
+.mainContainer {
+  width:100%;
+  height:calc(100vh - var(--header-height));
+  // height:calc((100vh - var(--header-height))/var(--scale));
+  // height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  padding: calc(40px/var(--scale));
+  width: calc(993px/var(--scale));
+  height: calc(400px/var(--scale));
+  background: var(--white);
+  font-size: calc(96px/var(--scale));
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: calc(24px/var(--scale));
+  img {
+    width: calc(143px/var(--scale));
+    height: calc(143px/var(--scale));
+    margin-right: calc(30px/var(--scale));
+  }
+  a {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    background: #259AED;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(28px/var(--scale));
+    padding: calc(8px/var(--scale)) calc(20px/var(--scale));
+    border-radius: calc(25px/var(--scale));
+    img {
+      margin-right: calc(8px/var(--scale));
+      width: calc(16px/var(--scale));
+      height: calc(16px/var(--scale));
+      filter: invert(100%) brightness(200%) contrast(105%);
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.name {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: calc(48px/var(--scale));
+  img {
+    margin-left: calc(8px/var(--scale));
+    width: calc(31px/var(--scale));
+    height: calc(31px/var(--scale));
+  }
+}
+.godsGame {
+  padding-top: calc(5px/var(--scale));
+  font-size: calc(36px/var(--scale));
+}
+.text {
+  margin-top: calc(30px/var(--scale));
+  margin-left: calc(10px/var(--scale));
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  font-size: calc(90px/var(--scale));
+}
+
+.twitterContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
