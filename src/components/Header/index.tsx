@@ -4,7 +4,6 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        {/* <img src="/images/logo.svg" alt="ig.news" /> */}
         <nav>
           <a href="./what">
             <img src="/images/question_icon.svg" alt="ig.news" />

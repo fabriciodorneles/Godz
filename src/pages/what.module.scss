@@ -1,7 +1,7 @@
 .headerContainer {
-    height:  80px;
+    height: var(--header-height);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     nav {
@@ -9,13 +9,14 @@
           display: flex;
           align-items: center;
           position: relative;
-          width:51px;
-          height:51px;
+          width: calc(51px/var(--scale-buttons));
+          height: calc(51px/var(--scale-buttons));
           transition: background-image 1s;
-          background-image: url(/images/question_icon_square.svg);
+          background-size: contain;
+          background-image: url(/images/question_icon.svg);
           background-repeat: no-repeat;
           &:hover {
-            background-image: url(/images/right_arrow_icon_square.svg);
+            background-image: url(/images/right_arrow_icon.svg);
             filter: invert(5%) brightness(105%) contrast(105%);
           }
       }

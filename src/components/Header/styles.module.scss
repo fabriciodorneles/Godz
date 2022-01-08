@@ -1,5 +1,5 @@
 .headerContainer {
-    height: 80px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,10 +23,10 @@
             display: flex;
             align-items: center;
             position: relative;
-            // img {
-            //   width: calc(50px/var(--scale));
-            //   height: calc(50px/var(--scale));
-            // }
+            img {
+              width: calc(50px/var(--scale-buttons));
+              height: calc(50px/var(--scale-buttons));
+            }
 
             transition: color 0.2s;
             &:hover {

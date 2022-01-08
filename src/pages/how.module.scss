@@ -1,30 +1,31 @@
 .headerContainer {
-    height:  80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: var(--header-height);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
-    nav {
-      a {
-          display: flex;
-          align-items: center;
-          position: relative;
-          width:51px;
-          height:51px;
-          transition: background-image 1s;
-          background-image: url(/images/right_arrow_icon_square.svg);
-          background-repeat: no-repeat;
-          &:hover {
-            background-image: url(/images/at_icon_square.svg);
-            filter: invert(5%) brightness(105%) contrast(105%);
-          }
+  nav {
+    a {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: calc(51px/var(--scale-buttons));
+        height: calc(51px/var(--scale-buttons));
+        transition: background-image 1s;
+        background-size: contain;
+        background-image: url(/images/right_arrow_icon.svg);
+        background-repeat: no-repeat;
+        &:hover {
+          background-image: url(/images/at_icon.svg);
+          filter: invert(5%) brightness(105%) contrast(105%);
+        }
       }
   }
 }
 
 .mainContainer {
   width:100%;
-  height:calc(100vh - 80px);
+  height:calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   justify-content: center;
