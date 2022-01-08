@@ -16,7 +16,7 @@
     --yellow-500: #eba417;
     --scale: 1;
     --scale-buttons:1;
-    --header-height: calc(230px/var(--scale-buttons))
+    --header-height: calc(230px/var(--scale))
 }
 
 @media (max-width: 1565px)

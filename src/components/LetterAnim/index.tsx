@@ -16,7 +16,7 @@ export function LetterAnim() {
             onInit={(typewriter) => {
               typewriter
                 .pauseFor(500)
-                .typeString('para poucos')
+                .typeString('para poucos.')
                 .pauseFor(1000)
                 .deleteAll()
                 .pauseFor(500)

@@ -99,6 +99,7 @@
 .textWho {
   padding-top: calc(25px/var(--scale));
   padding-left: calc(50px/var(--scale));
+  margin-bottom: calc(15px/var(--scale));
   p {
     font-size: calc(28px/var(--scale));
     font-weight: normal;
@@ -114,7 +115,8 @@
 }
 
 .neoTokyoWho {
-  padding-top: calc(30px/var(--scale));
+  display: flex;
+  align-items: center;
   padding-left: calc(50px/var(--scale));
   a {
     font-size: calc(24px/var(--scale));
