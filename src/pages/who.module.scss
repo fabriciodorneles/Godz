@@ -16,7 +16,7 @@
         background-image: url(/images/at_icon.svg);
         background-repeat: no-repeat;
         &:hover {
-          background-image: url(/images/up_arrow.svg);
+          background-image: url(/images/up_arrow_icon.svg);
           filter: invert(5%) brightness(105%) contrast(105%);
         }
       }
@@ -25,49 +25,63 @@
 
 .mainContainer {
   width:100%;
-  height:calc(100vh - 80px);
+  height:calc(100vh - var(--header-height));
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.setContainer {
+  width:100%;
+  display: flex;
   justify-content: center;
 }
 
 .containerWho {
   border: 1px solid #2b2b2b;
-  width: 1009px;
-  height: 257px;
+  width: calc(623px/var(--scale));
+  height: calc(305px/var(--scale));
   display: flex;
+  img {
+    width: calc(306px/var(--scale));
+    height: calc(306px/var(--scale));
+  }
 }
 
 .infoWho {
-  padding-left: 40px;
+  width: 100%;
 }
 
 .headerWho {
   display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  width: 650px;
+  justify-content: center;
+  align-items: center;
+  padding: calc(15px/var(--scale)) 0px;
+  background: white;
 }
 
 .idWho {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .titleWho {
   h1 {
-    font-size: 72px;
-    font-weight: 400;
+    color: black;
+    font-size: calc(60px/var(--scale));
+    font-weight: bold;
   }
 }
 
 .instaWho {
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: calc(30px/var(--scale));
 
   a {
-    font-size: 36px;
+    font-size: calc(32px/var(--scale));
     color: #6B6B6B;
 
     &:hover {
@@ -83,22 +97,28 @@
 }
 
 .textWho {
-  padding-top: 25px;
+  padding-top: calc(25px/var(--scale));
+  padding-left: calc(50px/var(--scale));
   p {
-    font-size: 28px;
+    font-size: calc(28px/var(--scale));
+    font-weight: normal;
   }
 
 }
 
 .divider {
-  height: 70px;
+  img {
+    width: calc(117px/var(--scale));
+    height: calc(383px/var(--scale));
+  }
 }
 
 .neoTokyoWho {
-  padding-top: 30px;
-  p {
-    font-size: 28px;
-    color: #6B6B6B;
+  padding-top: calc(30px/var(--scale));
+  padding-left: calc(50px/var(--scale));
+  a {
+    font-size: calc(24px/var(--scale));
+    color: #c7c7c7;
     text-decoration: underline;
   }
 }
@@ -108,10 +128,9 @@
   justify-content: center;
 }
 .millionsContainer {
-  background-color: var(--white);
-  padding: 25px;
+  padding: calc(25px/var(--scale));
   p {
-    font-size: 37px;
-    color: var(--black);
+    font-size: calc(37px/var(--scale));
+    color: var(--white);
   }
 }
