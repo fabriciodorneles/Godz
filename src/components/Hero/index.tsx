@@ -35,16 +35,15 @@ export function Hero() {
                   >
                     {bgState !== 'cernnunos'
                       ? (<img src="/images/G_big.svg" alt="Cernnunos" />) : (
-                        <a
-                          className={styles.linkWhat}
-                          href="./what"
-                        >
-                          <img
-                            src="/images/question_button.svg"
-                            alt="Question Button"
-                            className={styles.hiddenButton}
-                          />
-                        </a>
+                        <div className={styles.linkWhat}>
+                          <a href="./what">
+                            <img
+                              src="/images/question_button.svg"
+                              alt="Question Button"
+                              className={styles.hiddenButton}
+                            />
+                          </a>
+                        </div>
                       ) }
                   </div>
                   <div className={styles.divider1} />
@@ -61,16 +60,15 @@ export function Hero() {
                           alt="Deus Grego"
                         />
                       ) : (
-                        <a
-                          className={styles.linkHow}
-                          href="./how"
-                        >
-                          <img
-                            src="/images/arrow_button.svg"
-                            alt="Arrow Button"
-                            className={styles.hiddenButton}
-                          />
-                        </a>
+                        <div className={styles.linkHow}>
+                          <a href="./how">
+                            <img
+                              src="/images/arrow_button.svg"
+                              alt="Arrow Button"
+                              className={styles.hiddenButton}
+                            />
+                          </a>
+                        </div>
                       ) }
                   </div>
                   <div className={styles.divider2} />
@@ -87,16 +85,16 @@ export function Hero() {
                           alt="d_hover"
                         />
                       ) : (
-                        <a
-                          className={styles.linkWho}
-                          href="./who"
-                        >
-                          <img
-                            src="/images/at_button.svg"
-                            alt="At Button"
-                            className={styles.hiddenButton}
-                          />
-                        </a>
+                        <div className={styles.linkWho}>
+                          <a href="./who">
+                            <img
+                              src="/images/at_button.svg"
+                              alt="At Button"
+                              className={styles.hiddenButton}
+                            />
+                          </a>
+                        </div>
+
                       )}
                   </div>
                 </div>
