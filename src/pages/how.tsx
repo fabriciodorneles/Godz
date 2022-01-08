@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Header } from '../components/Header';
 import styles from './how.module.scss';
 
 export default function Home() {
@@ -7,15 +8,11 @@ export default function Home() {
       <Head>
         <title>Godz</title>
       </Head>
-      <header className={styles.headerContainer}>
-        <nav>
-          <a href="./who">
-            {/* <img src="/images/question_icon.svg" alt="ig.news" /> */}
-          </a>
-        </nav>
-      </header>
+      <Header />
       <div className={styles.mainContainer}>
-        <img src="/images/profeta.png" alt="ig.news" />
+
+        <a href="https://twitter.com/profetaeterno?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @profetaeterno</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
       </div>
     </>
   );

@@ -16,11 +16,11 @@ export function LetterAnim() {
             onInit={(typewriter) => {
               typewriter
                 .pauseFor(500)
-                .typeString('difícil')
+                .typeString('para poucos')
                 .pauseFor(1000)
                 .deleteAll()
                 .pauseFor(500)
-                .typeString('free mint.')
+                .typeString('um jogo.')
                 .pauseFor(1000)
                 .deleteAll()
                 .pauseFor(500)

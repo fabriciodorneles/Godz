@@ -1,27 +1,27 @@
 .mainContainer {
   width:100%;
-  height:calc(100vh - 80px);
+  height:calc((100vh - 80px)/var(--scale));
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .phrase {
-  font-size: 96px;
+  font-size: calc(96px/var(--scale));
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .phrasePart1 {
-  width: 220px;
+  width: calc(220px/var(--scale));
 }
 
 .phrasePart2 {
   color: var(--black);
   background: var(--white);
-  padding-left: 10px;
-  padding-right: 20px;
+  padding-left: calc(10px/var(--scale));
+  padding-right: calc(20px/var(--scale));
 }
 
 

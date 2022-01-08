@@ -4,43 +4,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  --scale: 1;
   background-color: rgba(0,0,0,0.6)
-}
-
-@media (max-width: 1565px)
-{
-    .externalContainer {
-    --scale: 1.3;
-    }
-}
-
-@media (max-width: 1185px)
-{
-    .externalContainer {
-    --scale: 1.7;
-    }
-}
-
-@media (max-width: 755px)
-{
-    .externalContainer {
-    --scale: 2.3;
-    }
-}
-
-@media (max-width: 620px)
-{
-    .externalContainer {
-    --scale: 3;
-    }
-}
-
-@media (max-width: 485px)
-{
-    .externalContainer {
-    --scale: 4;
-    }
 }
 
 .mainContainer {

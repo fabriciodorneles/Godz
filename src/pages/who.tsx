@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Header } from '../components/Header';
 import styles from './who.module.scss';
 
 export default function Home() {
@@ -7,13 +8,7 @@ export default function Home() {
       <Head>
         <title>Godz</title>
       </Head>
-      <header className={styles.headerContainer}>
-        <nav>
-          <a href="./">
-            {/* <img src="/images/question_icon.svg" alt="ig.news" /> */}
-          </a>
-        </nav>
-      </header>
+      <Header />
       <div className={styles.mainContainer}>
         <div>
           <div className={styles.containerWho}>

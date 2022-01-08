@@ -1,6 +1,6 @@
 import Head from 'next/head';
+import { Header } from '../components/Header';
 import { LetterAnim } from '../components/LetterAnim';
-import styles from './what.module.scss';
 
 export default function Home() {
   return (
@@ -8,13 +8,7 @@ export default function Home() {
       <Head>
         <title>Godz</title>
       </Head>
-      <header className={styles.headerContainer}>
-        <nav>
-          <a href="./how">
-            {/* <img src="/images/question_icon.svg" alt="ig.news" /> */}
-          </a>
-        </nav>
-      </header>
+      <Header />
       <div>
         <LetterAnim />
       </div>
