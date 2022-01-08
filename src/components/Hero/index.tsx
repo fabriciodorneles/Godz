@@ -17,11 +17,11 @@ export function Hero() {
           </div>
           {/* <div className={styles.heroImageContainer}>
 
-        <img src="/images/bg_cernnunos.png" alt="Cernunos" />
-        <img src="/images/bg_grego.png" alt="Deus Grego" />
-        <img src="/images/bg_anubis.png" alt="Deus Grego" />
+            <img className={styles.imgBG} src="/images/bg_cernnunos.png" alt="Cernunos" />
+            <img src="/images/bg_grego.png" alt="Deus Grego" />
+            <img src="/images/bg_anubis.png" alt="Deus Grego" />
 
-      </div> */}
+          </div> */}
           <div>
             <div className={styles.heroInsideContainer}>
               <div className={styles.heroTitleContainer}>
@@ -36,11 +36,10 @@ export function Hero() {
                     {bgState !== 'cernnunos'
                       ? (<img src="/images/G_big.svg" alt="Cernnunos" />) : (
                         <a
-                          style={{ paddingTop: '140px', paddingRight: '70px' }}
+                          className={styles.linkWhat}
                           href="./what"
                         >
                           <img
-                            style={{ width: '40px', height: '40px' }}
                             src="/images/question_button.svg"
                             alt="Question Button"
                             className={styles.hiddenButton}
@@ -48,7 +47,7 @@ export function Hero() {
                         </a>
                       ) }
                   </div>
-                  <div style={{ width: '90px' }} />
+                  <div className={styles.divider1} />
                   <div
                     className={styles.buttonO}
                     onFocus={() => setBgState('grego')}
@@ -63,11 +62,10 @@ export function Hero() {
                         />
                       ) : (
                         <a
-                          style={{ paddingTop: '110px', paddingLeft: '80px' }}
+                          className={styles.linkHow}
                           href="./how"
                         >
                           <img
-                            style={{ width: '40px', height: '40px' }}
                             src="/images/arrow_button.svg"
                             alt="Arrow Button"
                             className={styles.hiddenButton}
@@ -75,7 +73,7 @@ export function Hero() {
                         </a>
                       ) }
                   </div>
-                  <div style={{ width: '80px' }} />
+                  <div className={styles.divider2} />
                   <div
                     className={styles.buttonD}
                     onFocus={() => setBgState('annubis')}
@@ -90,11 +88,10 @@ export function Hero() {
                         />
                       ) : (
                         <a
-                          style={{ paddingTop: '55px', paddingRight: '50px' }}
+                          className={styles.linkWho}
                           href="./who"
                         >
                           <img
-                            style={{ width: '40px', height: '40px' }}
                             src="/images/at_button.svg"
                             alt="At Button"
                             className={styles.hiddenButton}
