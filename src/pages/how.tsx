@@ -12,7 +12,7 @@ export default function Home() {
       <div className={styles.mainContainer}>
 
         <a href="https://twitter.com/profetaeterno?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @profetaeterno</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+        <script async src="https://platform.twitter.com/widgets.js" />
       </div>
     </>
   );
