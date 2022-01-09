@@ -7,7 +7,9 @@ export function ProphetProfile() {
         <div className={styles.info}>
           <div className={styles.title}>
             <div>
-              <img src="./images/profeta_avatar.png" alt="" />
+              <a href="./game1">
+                <img src="./images/profeta_avatar.png" alt="" />
+              </a>
             </div>
             <div>
               <div className={styles.name}>
