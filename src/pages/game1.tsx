@@ -17,7 +17,7 @@ export default function Home() {
       <div className={styles.gameFrame}>
         <iframe title="TopDown Shooter" src="jogos/index.html" width="600" height="400" scrolling="no" />
         <div className={styles.instructionsGame}>
-          Use as setas para se mover e mouse para mover a mira e atirar.
+          Use as setas para se mover e mouse para mirar e atirar.
         </div>
       </div>
     </>
