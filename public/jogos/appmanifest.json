@@ -1,10 +1,10 @@
 {
-	"name": "Top Down Shooter",
-	"short_name": "Top Down Shooter",
+	"name": "Swing Birds",
+	"short_name": "Swing Birds",
 	"description": "",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "any",
+	"orientation": "portrait",
 	"background_color": "#ffffff",
 	"icons": [
 		{
