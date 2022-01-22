@@ -5,9 +5,9 @@ import Web3 from 'web3';
 import Web3Token from 'web3-token';
 import styles from './game1.module.scss';
 
-declare global {
-  interface Window { ethereum: any; }
-}
+// declare global {
+//   interface Window { ethereum: any; }
+// }
 
 export default function Home() {
   const [isLoggedin, setLoggedin] = useState(false);
@@ -22,6 +22,7 @@ export default function Home() {
 
   const login = async () => {
     const web3 = new Web3(window.ethereum);
+
     try {
       const accounts = await window.ethereum.send(
         'eth_requestAccounts',
