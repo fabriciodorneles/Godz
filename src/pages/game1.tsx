@@ -1,7 +1,64 @@
+import Cookies from 'js-cookie';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import Web3 from 'web3';
+import Web3Token from 'web3-token';
 import styles from './game1.module.scss';
 
+declare global {
+  interface Window { ethereum: any; }
+}
+
 export default function Home() {
+  const [isLoggedin, setLoggedin] = useState(false);
+  const [userNotRegistered, setUserNotRegistered] = useState(false);
+
+  useEffect(() => {
+    const authToken = Cookies.get('fauna-auth');
+    if (authToken) {
+      setLoggedin(true);
+    }
+  }, []);
+
+  const login = async () => {
+    const web3 = new Web3(window.ethereum);
+    try {
+      const accounts = await window.ethereum.send(
+        'eth_requestAccounts',
+      );
+
+      const address = accounts.result[0];
+      const signed_msg = await Web3Token.sign((msg) => web3.eth.personal.sign(msg, address, undefined), '1h');
+
+      const response = await fetch('api/user', {
+        method: 'POST',
+        body: JSON.stringify({
+          signed_msg,
+        }),
+      });
+
+      if (response.status !== 200 && response.status !== 202) {
+        return;
+      }
+
+      if (response.status === 202) {
+        setUserNotRegistered(true);
+      } else {
+        const { token } = await response.json();
+        const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
+        Cookies.set('fauna-auth', token, { expires: one_hour });
+        setLoggedin(true);
+      }
+    } catch (error) {
+      alert('Please Install MetaMask Wallet');
+    }
+  };
+
+  const logout = () => {
+    Cookies.remove('fauna-auth');
+    setLoggedin(false);
+  };
+
   return (
     <>
       <Head>
@@ -16,6 +73,20 @@ export default function Home() {
       </header>
       <div className={styles.gameFrame}>
         <iframe title="TopDown Shooter" src="jogos/index.html" width="335" height="500" scrolling="no" />
+      </div>
+      <div className={styles.gameFrame}>
+        { !isLoggedin
+          ? <button type="button" className={styles.buttonRegister} onClick={login}>Conectar Metamask</button>
+          : <button type="button" className={styles.buttonRegister} onClick={logout}>Desconectar</button>}
+        {userNotRegistered && (
+        <p>
+          Carteira não registrada.
+          Para registrar clique
+          {' '}
+          <a href="register">aqui</a>
+          .
+        </p>
+        )}
       </div>
     </>
   );

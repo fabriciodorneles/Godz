@@ -28,10 +28,23 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 40px;
+    padding-top: 20px;
+    p {
+      padding: 12px;
+    }
+    a {
+      transition: background-image 1s;
+      &:hover {
+        filter: invert(40%) brightness(105%) contrast(105%);
+      }
+    }
 }
 
 .instructionsGame {
     padding-top: 20px;
+}
+
+.buttonRegister {
+  padding: 5px;
 }
 

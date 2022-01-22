@@ -24,6 +24,7 @@
         "react-hooks"
     ],
     "rules": {
+      "camelcase":"off",
       "padded-blocks":"warn",
       "react-in-jsx-scope": "off",
       "react-hooks/rules-of-hooks": "error",
