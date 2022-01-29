@@ -2,12 +2,8 @@ import Cookies from 'js-cookie';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Web3 from 'web3';
-import Web3Token from 'web3-token';
 import styles from './game1.module.scss';
 
-// declare global {
-//   interface Window { ethereum: any; }
-// }
 
 export default function Home() {
   const [isLoggedin, setLoggedin] = useState(false);
@@ -45,9 +41,9 @@ export default function Home() {
       if (response.status === 202) {
         setUserNotRegistered(true);
       } else {
-        const { token } = await response.json();
+        const respo = await response.json();
         const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
-        Cookies.set('fauna-auth', token, { expires: one_hour });
+        Cookies.set('fauna-auth', respo.token, { expires: one_hour });
         setLoggedin(true);
       }
     } catch (error) {

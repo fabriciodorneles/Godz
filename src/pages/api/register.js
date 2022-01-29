@@ -1,7 +1,6 @@
 // Copyright Fauna, Inc.
 // SPDX-License-Identifier: MIT-0
 
-import Web3Token from 'web3-token';
 import faunadb, {
   Get,
   Match,
@@ -11,7 +10,7 @@ import faunadb, {
   TimeAdd,
   Now,
   Tokens,
-  Ref
+  Ref,
 } from 'faunadb';
 
 const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
