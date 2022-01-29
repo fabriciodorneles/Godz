@@ -5,10 +5,6 @@ import Web3 from 'web3';
 import Web3Token from 'web3-token';
 import styles from './game1.module.scss';
 
-// declare global {
-//   interface Window { ethereum: any; }
-// }
-
 export default function Home() {
   const [isLoggedin, setLoggedin] = useState(false);
   const [userNotRegistered, setUserNotRegistered] = useState(false);
@@ -27,10 +23,8 @@ export default function Home() {
       const accounts = await window.ethereum.send(
         'eth_requestAccounts',
       );
-
       const address = accounts.result[0];
       const signed_msg = await Web3Token.sign((msg) => web3.eth.personal.sign(msg, address, undefined), '1h');
-
       const response = await fetch('api/user', {
         method: 'POST',
         body: JSON.stringify({
@@ -76,17 +70,28 @@ export default function Home() {
         <iframe title="TopDown Shooter" src="jogos/index.html" width="335" height="500" scrolling="no" />
       </div>
       <div className={styles.gameFrame}>
-        { !isLoggedin
-          ? <button type="button" className={styles.buttonRegister} onClick={login}>Conectar Metamask</button>
-          : <button type="button" className={styles.buttonRegister} onClick={logout}>Desconectar</button>}
+        { !isLoggedin && !userNotRegistered
+          && <button type="button" className={styles.buttonRegister} onClick={login}>
+              <div>Conectar Metamask</div>
+              <img src="/images/metamask.svg" alt="metamask icon" />
+            </button>}
+        { isLoggedin && <button type="button" className={styles.buttonConnected} onClick={logout}>
+              <div>Carteira Conectada</div>
+              <img src="/images/greenLight.svg" alt="green light" />
+            </button>}
         {userNotRegistered && (
-        <p>
-          Carteira não registrada.
-          Para registrar clique
-          {' '}
-          <a href="register">aqui</a>
-          .
-        </p>
+          <>
+            <button type="button" className={styles.buttonConnected} onClick={logout}>
+              <div>Carteira não registrada</div>
+              <img src="/images/redLight.svg" alt="red light" />
+            </button>
+            <p>
+              É só clicar
+              {' '}
+              <a href="register">aqui</a>
+              {' '} para fazer o registro
+            </p>
+          </>
         )}
       </div>
     </>

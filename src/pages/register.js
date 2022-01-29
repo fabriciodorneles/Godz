@@ -1,11 +1,9 @@
-// pages/index.js
-
+import Web3Token from 'web3-token';
 import Head from 'next/head'
 import { useState } from 'react'
 import Cookies from 'js-cookie'
 import Web3 from 'web3';
-import Web3Token from 'web3-token';
-import styles from './Register.module.scss'
+import styles from './register.module.scss'
 
 export default function Register() {
   const [isLoggedin, setLoggedin] = useState(false);
@@ -40,7 +38,6 @@ export default function Register() {
         const one_hour = new Date(new Date().getTime() +  3600 * 1000) // sign token for 1 hour
         Cookies.set('fauna-auth', token, { expires: one_hour })
         setLoggedin(true)
-
     } catch (error) {
       alert('Please Install MetaMask Wallet')
       return;
@@ -58,15 +55,20 @@ export default function Register() {
     <div className={styles.container}>
       <main className={styles.main}>
         <form className={styles.formContainer} onSubmit={registerUser}>
-          <label htmlFor="name">Name</label>
-          <input className={styles.inputContainer} id="name" name="name" type="text" autoComplete="name" required />
-          <label htmlFor="email">Email</label>
-          <input className={styles.inputContainer} id="email" name="email" type="text" autoComplete="email" required />
-          <label htmlFor="name">Discord</label>
-          <input className={styles.inputContainer} id="discord" name="discord" type="text" autoComplete="discord" required />
-          <button type="submit" className="uk-button uk-button-primary uk-button-large">Register</button>
+          <div className={styles.labelContainer}>Nome</div>
+          <input className={styles.inputContainer} id="name" name="name" type="text" autoComplete="name" placeholder='Seu Nome' required />
+          <div className={styles.labelContainer}>Email</div>
+          <input className={styles.inputContainer} id="email" name="email" type="text" autoComplete="email" placeholder='seuemail@email.com' required />
+          <div className={styles.labelContainer}>Discord</div>
+          <input className={styles.inputContainer} id="discord" name="discord" type="text" autoComplete="discord" placeholder='nome#0000' required />
+          <button type="submit" className={styles.buttonSubmit}>Registrar</button>
         </form>
-        {isLoggedin && <p>Carteira Cadastrada. Pode Voltar ao <a href='game1'>Jogo</a>.</p>}
+        {isLoggedin && (
+          <>
+            <div>Cadastro realizado com sucesso!</div>
+            <a href='game1' className={styles.buttonRegistered}><div>&lt;</div>{' '}Voltar ao Jogo</a>
+          </>
+          )}
       </main>
     </div>
     </>

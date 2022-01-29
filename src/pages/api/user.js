@@ -1,8 +1,5 @@
-// Copyright Fauna, Inc.
-// SPDX-License-Identifier: MIT-0
-
 import Web3Token from 'web3-token';
-import faunadb, { 
+import faunadb, {
   Get,
   Match,
   Index,
@@ -22,7 +19,7 @@ export default async function handler(req, res) {
   console.log('Public Address Retrieved', address);
 
   try {
-    // Find user 
+    // Find user
     const user = await serverClient.query(
       Get(
         Match(Index('user_by_public_address'), address)
@@ -30,7 +27,7 @@ export default async function handler(req, res) {
     )
     const accessToken = await createAccessToken(user.ref.id, 3600);
     res.status(200).json({ token: accessToken.secret });
-  
+
   } catch (error) {
     // If user not found in database create a new user
     if(error.name === 'NotFound') {
@@ -45,7 +42,7 @@ export default async function handler(req, res) {
       return res.status(401).json({ message: 'Invalid Fauna Secret or Token' });
     }
   }
-  
+
 }
 
 // Registers a new User in FaunaDB
@@ -58,7 +55,7 @@ const registerUser = (public_address) => {
   );
 };
 
-// Generate an access Token For Fauna 
+// Generate an access Token For Fauna
 const createAccessToken = (ref, ttl) => {
   return serverClient.query(
     Create(Tokens(), {
