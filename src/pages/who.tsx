@@ -33,9 +33,9 @@ export default function Home() {
               </div>
               <div className={styles.textWho}>
                 <p>
-                  +10 anos xp em
+                  +10 years of xp in
                   <br />
-                  game dev & tech
+                  game and tech dev
                 </p>
               </div>
               <div className={styles.neoTokyoWho}>
@@ -63,9 +63,9 @@ export default function Home() {
               </div>
               <div className={styles.textWho}>
                 <p>
-                  Engenheiro e
+                  Engineering and
                   <br />
-                  MBA em bizdev
+                  MBA in bizdev
                 </p>
               </div>
               <div className={styles.neoTokyoWho}>
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
         <div className={styles.commentContainer}>
           <div className={styles.millionsContainer}>
-            <p>Milhões em NFTs</p>
+            <p>Millions in NFTs</p>
           </div>
         </div>
       </div>

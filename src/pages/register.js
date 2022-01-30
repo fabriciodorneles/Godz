@@ -48,25 +48,25 @@ export default function Register() {
   return (
     <>
     <Head>
-      <title>My page title</title>
+      <title>Game 1</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/css/uikit.min.css" />
     </Head>
     <div className={styles.container}>
       <main className={styles.main}>
         <form className={styles.formContainer} onSubmit={registerUser}>
-          <div className={styles.labelContainer}>Nome</div>
-          <input className={styles.inputContainer} id="name" name="name" type="text" autoComplete="name" placeholder='Seu Nome' required />
+          <div className={styles.labelContainer}>Name</div>
+          <input className={styles.inputContainer} id="name" name="name" type="text" autoComplete="name" placeholder='Your Name' required />
           <div className={styles.labelContainer}>Email</div>
-          <input className={styles.inputContainer} id="email" name="email" type="text" autoComplete="email" placeholder='seuemail@email.com' required />
+          <input className={styles.inputContainer} id="email" name="email" type="text" autoComplete="email" placeholder='youremail@email.com' required />
           <div className={styles.labelContainer}>Discord</div>
-          <input className={styles.inputContainer} id="discord" name="discord" type="text" autoComplete="discord" placeholder='nome#0000' required />
-          <button type="submit" className={styles.buttonSubmit}>Registrar</button>
+          <input className={styles.inputContainer} id="discord" name="discord" type="text" autoComplete="discord" placeholder='name#0000' required />
+          <button type="submit" className={styles.buttonSubmit}>Register</button>
         </form>
         {isLoggedin && (
           <>
-            <div>Cadastro realizado com sucesso!</div>
-            <a href='game1' className={styles.buttonRegistered}><div>&lt;</div>{' '}Voltar ao Jogo</a>
+            <div>Registration Successful</div>
+            <a href='game1' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
           </>
           )}
       </main>

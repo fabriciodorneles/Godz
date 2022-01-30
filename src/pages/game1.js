@@ -72,24 +72,24 @@ export default function Home() {
       <div className={styles.gameFrame}>
         { !isLoggedin && !userNotRegistered
           && <button type="button" className={styles.buttonRegister} onClick={login}>
-              <div>Conectar Metamask</div>
+              <div>Connect Metamask</div>
               <img src="/images/metamask.svg" alt="metamask icon" />
             </button>}
         { isLoggedin && <button type="button" className={styles.buttonConnected} onClick={logout}>
-              <div>Carteira Conectada</div>
+              <div>Wallet Connected</div>
               <img src="/images/greenLight.svg" alt="green light" />
             </button>}
         {userNotRegistered && (
           <>
             <button type="button" className={styles.buttonConnected} onClick={logout}>
-              <div>Carteira não registrada</div>
+              <div>Wallet not registered</div>
               <img src="/images/redLight.svg" alt="red light" />
             </button>
             <p>
-              É só clicar
+              Just click
               {' '}
-              <a href="register">aqui</a>
-              {' '} para fazer o registro
+              <a href="register">here</a>
+              {' '} to register
             </p>
           </>
         )}

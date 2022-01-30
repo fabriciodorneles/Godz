@@ -6,7 +6,7 @@ export function LetterAnim() {
     <div className={styles.mainContainer}>
       <div className={styles.phrase}>
         <div className={styles.phrasePart1}>
-          Será
+          It will be
         </div>
         <div className={styles.phrasePart2}>
           <TypewriterComponent
@@ -15,21 +15,21 @@ export function LetterAnim() {
             }}
             onInit={(typewriter) => {
               typewriter
-                .pauseFor(500)
-                .typeString('para poucos.')
+                .pauseFor(1000)
+                .typeString('a game.')
                 .pauseFor(1000)
                 .deleteAll()
                 .pauseFor(500)
-                .typeString('um jogo.')
+                .typeString('for the deserving.')
                 .pauseFor(1000)
                 .deleteAll()
                 .pauseFor(500)
-                .typeString('uma jornada.')
+                .typeString('a journey.')
                 .pauseFor(2000)
                 .deleteAll()
                 .pauseFor(1000)
                 .typeString('. . .')
-                .pauseFor(1000)
+                .pauseFor(3000)
                 .start();
             }}
           />

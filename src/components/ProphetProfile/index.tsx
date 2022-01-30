@@ -13,7 +13,7 @@ export function ProphetProfile() {
             </div>
             <div>
               <div className={styles.name}>
-                PROFETA
+                PROPHET
                 <img src="./images/verified_icon.svg" alt="" />
               </div>
               <div className={styles.godsGame}>
@@ -26,12 +26,12 @@ export function ProphetProfile() {
               href="https://twitter.com/profetaeterno?ref_src=twsrc%5Etfw"
             >
               <img src="./images/twitter_icon.svg" alt="" />
-              Follow @profetaeterno
+              Follow @theprophetsgame
             </a>
           </div>
         </div>
         <div className={styles.text}>
-          O Profeta será seu guia.
+          Your guide.
         </div>
 
       </div>
