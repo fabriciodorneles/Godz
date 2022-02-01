@@ -23,7 +23,9 @@ export function ProphetProfile() {
           </div>
           <div className={styles.twitterContainer}>
             <a
-              href="https://twitter.com/profetaeterno?ref_src=twsrc%5Etfw"
+              href="https://twitter.com/theprophetsgame"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img src="./images/twitter_icon.svg" alt="" />
               Follow @theprophetsgame

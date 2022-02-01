@@ -63,7 +63,7 @@ export default function Home() {
               </div>
               <div className={styles.textWho}>
                 <p>
-                  Engineering and
+                  Engineer and
                   <br />
                   MBA in bizdev
                 </p>
