@@ -11,11 +11,15 @@ import faunadb, {
   Tokens,
   Ref,
 } from 'faunadb';
+const requestIp = require('request-ip');
+
 
 
 const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
 export default async function handler(req, res) {
+  const clientIp = requestIp.getClientIp(req);
+  console.log('--> IP <-- ', clientIp);
   const {signed_msg, name, email, discord} = JSON.parse(req.body);
   const { address, body } = await Web3Token.verify(signed_msg);
   console.log('Public Address Retrieved', address);
@@ -39,6 +43,7 @@ export default async function handler(req, res) {
         email,
         discord,
         highScore: 0,
+        clientIP:clientIp
       }
       const newUser = await registerUser(data)
       const accessToken = await createAccessToken(newUser.ref.id, 3600);
