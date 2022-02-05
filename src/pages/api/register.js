@@ -21,41 +21,52 @@ export default async function handler(req, res) {
   const clientIp = requestIp.getClientIp(req);
   console.log('--> IP <-- ', clientIp);
   const {signed_msg, name, email, discord} = JSON.parse(req.body);
-  const { address, body } = await Web3Token.verify(signed_msg);
+  const { address } = await Web3Token.verify(signed_msg);
   console.log('Public Address Retrieved', address);
 
   try {
-    // Find user
-    const user = await serverClient.query(
+    // Find if has IP in database
+    const userByIp = await serverClient.query(
       Get(
-        Match(Index('user_by_public_address'), address)
+        Match(Index('user_by_ip_address'), clientIp)
       )
     )
-    const accessToken = await createAccessToken(user.ref.id, 3600);
-    res.status(200).json({ token: accessToken.secret });
-
+    console.log('userByIP', userByIp.clientIP);
+    return res.status(202).json({ message: 'IP already registered.' });
   } catch (error) {
-    // If user not found in database create a new user
     if(error.name === 'NotFound') {
-      const data = {
-        public_address: address,
-        name,
-        email,
-        discord,
-        highScore: 0,
-        clientIP:clientIp
-      }
-      const newUser = await registerUser(data)
-      const accessToken = await createAccessToken(newUser.ref.id, 3600);
-      return res.status(200).json({ token: accessToken.secret });
-    }
+      try {
+        // Find user
+        const user = await serverClient.query(
+          Get(
+            Match(Index('user_by_public_address'), address)
+          )
+        )
+        const accessToken = await createAccessToken(user.ref.id, 3600);
+        res.status(200).json({ token: accessToken.secret });
+      } catch (error) {
+        // If user not found in database create a new user
+        if(error.name === 'NotFound') {
+          const data = {
+            public_address: address,
+            name,
+            email,
+            discord,
+            highScore: 0,
+            clientIP:clientIp
+          }
+          const newUser = await registerUser(data)
+          const accessToken = await createAccessToken(newUser.ref.id, 3600);
+          return res.status(200).json({ token: accessToken.secret });
+        }
 
-    // authentication error
-    if (error.name === 'Unauthorized') {
-      return res.status(401).json({ message: 'Invalid Fauna Secret or Token' });
+        // authentication error
+        if (error.name === 'Unauthorized') {
+          return res.status(401).json({ message: 'Invalid Fauna Secret or Token' });
+        }
+      }
     }
   }
-
 }
 
 // Registers a new User in FaunaDB

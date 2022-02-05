@@ -7,6 +7,7 @@ import styles from './register.module.scss'
 
 export default function Register() {
   const [isLoggedin, setLoggedin] = useState(false);
+  const [ipAlreadyRegistered, setIpAlreadyRegistered] = useState(false);
 
   const registerUser = async event => {
     event.preventDefault()
@@ -19,7 +20,6 @@ export default function Register() {
       console.log('accounts', accounts.result[0]);
       const address = accounts.result[0];
       const signed_msg = await Web3Token.sign(msg => web3.eth.personal.sign(msg, address), '1h');
-
       const response = await fetch('/api/register', {
         method: 'POST',
         body: JSON.stringify({
@@ -33,11 +33,16 @@ export default function Register() {
       if(response.status !== 200 && response.status !== 202) {
         return;
       }
-      console.log('==> ', response.status);
+
+      if (response.status === 202) {
+        setIpAlreadyRegistered(true);
+      } else {
         const { token } = await response.json();
-        const one_hour = new Date(new Date().getTime() +  3600 * 1000) // sign token for 1 hour
-        Cookies.set('fauna-auth', token, { expires: one_hour })
-        setLoggedin(true)
+        const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
+        Cookies.set('fauna-auth', token, { expires: one_hour });
+        setLoggedin(true);
+      }
+
     } catch (error) {
       alert('Please Install MetaMask Wallet')
       return;
@@ -66,6 +71,12 @@ export default function Register() {
         {isLoggedin && (
           <>
             <div>Registration Successful</div>
+            <a href='game1' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
+          </>
+          )}
+        {ipAlreadyRegistered && (
+          <>
+            <div>IP já registrado. Apenas uma carteira por IP.</div>
             <a href='game1' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
           </>
           )}

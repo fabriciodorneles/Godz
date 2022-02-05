@@ -11,15 +11,11 @@ import faunadb, {
   Ref
 } from 'faunadb';
 
-const requestIp = require('request-ip');
-
 const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
 export default async function handler(req, res) {
-  const clientIp = requestIp.getClientIp(req);
-  console.log('--> IP <-- ', clientIp);
   const {signed_msg} = JSON.parse(req.body);
-  const { address, body } = await Web3Token.verify(signed_msg);
+  const { address } = await Web3Token.verify(signed_msg);
   console.log('Public Address Retrieved', address);
 
   try {
@@ -33,10 +29,8 @@ export default async function handler(req, res) {
     res.status(200).json({ token: accessToken.secret });
 
   } catch (error) {
-    // If user not found in database create a new user
+    // User not found. Ask to Register.
     if(error.name === 'NotFound') {
-      // const newUser = await registerUser(address)
-      // const accessToken = await createAccessToken(newUser.ref.id, 3600);
       console.log('Não achou');
       return res.status(202).json({ message: 'User Not in database.' });
     }
@@ -48,17 +42,6 @@ export default async function handler(req, res) {
   }
 
 }
-
-// Registers a new User in FaunaDB
-const registerUser = (public_address) => {
-  return serverClient.query(
-      Create(
-        Collection('User'),
-        { data: { public_address } },
-      )
-  );
-};
-
 // Generate an access Token For Fauna
 const createAccessToken = (ref, ttl) => {
   return serverClient.query(
