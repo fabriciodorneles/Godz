@@ -1,0 +1,88 @@
+.headerContainer {
+    height: var(--header-height);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    nav {
+      a {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: calc(51px/var(--scale-buttons));
+          height: calc(51px/var(--scale-buttons));
+          transition: background-image 1s;
+          background-size: contain;
+          background-image: url(/images/question_icon.svg);
+          background-repeat: no-repeat;
+          &:hover {
+            background-image: url(/images/right_arrow_icon.svg);
+            filter: invert(5%) brightness(105%) contrast(105%);
+          }
+      }
+  }
+}
+
+.gameFrame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      font-size: 13px;
+      padding: 12px;
+      color: #939393;
+    }
+    a {
+      color: #FFFFFF;
+      text-decoration: underline;
+      transition: background-image 1s;
+      &:hover {
+        filter: invert(40%) brightness(105%) contrast(105%);
+      }
+    }
+}
+
+.instructionsGame {
+    padding-top: 20px;
+}
+
+.buttonRegister {
+  display: flex;
+  align-content: center;
+  padding: 6px 16px;
+  background: #EDEDED;
+  border-radius: 20px;
+  border: solid 1px #939393;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  div {
+    padding-top: 2px;
+  }
+  img {
+    margin-left: 10px;
+  }
+}
+
+.buttonConnected {
+  display: flex;
+  align-content: center;
+  padding: 8px 16px;
+  background: #EDEDED00;
+  color: #939393;
+  border-radius: 20px;
+  border: solid 1px #939393;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  img {
+    margin-top: 2px;
+    margin-left: 10px;
+  }
+}
+
+
+
+
