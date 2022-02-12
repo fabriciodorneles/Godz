@@ -7,14 +7,12 @@ export function ProphetProfile() {
         <div className={styles.info}>
           <div className={styles.title}>
             <div>
-              {/* <a href="./game1"> */}
-              <img src="./images/profeta_avatar.png" alt="" />
-              {/* </a> */}
+              <img src="./images/profeta_avatar.png" alt="prophet avatar" />
             </div>
             <div>
               <div className={styles.name}>
                 PROPHET
-                <img src="./images/verified_icon.svg" alt="" />
+                <img src="./images/verified_icon.svg" alt="verified icon" />
               </div>
               <div className={styles.godsGame}>
                 Gods Game
@@ -27,7 +25,7 @@ export function ProphetProfile() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./images/twitter_icon.svg" alt="" />
+              <img src="./images/twitter_icon.svg" alt="twitter icon" />
               Follow @theprophetsgame
             </a>
           </div>

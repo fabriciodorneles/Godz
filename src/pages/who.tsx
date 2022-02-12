@@ -48,11 +48,11 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.divider}>
-            <img src="/images/dividerWho.svg" alt="Condz" />
+            <img src="/images/dividerWho.svg" alt="divider" />
           </div>
           <div className={styles.containerWho}>
             <div>
-              <img src="/images/gus_marcacao.png" alt="Condz" />
+              <img src="/images/gus_marcacao.png" alt="Gusdisa" />
             </div>
             <div className={styles.infoWho}>
               <div className={styles.headerWho}>

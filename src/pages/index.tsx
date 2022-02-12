@@ -7,7 +7,6 @@ export default function Home() {
       <Head>
         <title>Godz</title>
       </Head>
-      {/* <Header  /> */}
       <Hero />
     </>
   );

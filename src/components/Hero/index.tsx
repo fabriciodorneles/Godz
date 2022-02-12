@@ -10,18 +10,11 @@ export function Hero() {
         <div className={styles.parent}>
           <div className={styles.heroImageContainer}>
 
-            {bgState === 'cernnunos' && (<img src="/images/bg_cernnunos.png" alt="Cernunos" />)}
-            {bgState === 'grego' && (<img src="/images/bg_grego.png" alt="Deus Grego" />)}
-            {bgState === 'annubis' && (<img src="/images/bg_anubis.png" alt="Deus Grego" />)}
+            {bgState === 'cernnunos' && (<img src="/images/bg_cernnunos.png" alt="Cernnunos" />)}
+            {bgState === 'odin' && (<img src="/images/bg_odin.png" alt="Odin" />)}
+            {bgState === 'annubis' && (<img src="/images/bg_anubis.png" alt="Annubis" />)}
 
           </div>
-          {/* <div className={styles.heroImageContainer}>
-
-            <img className={styles.imgBG} src="/images/bg_cernnunos.png" alt="Cernunos" />
-            <img src="/images/bg_grego.png" alt="Deus Grego" />
-            <img src="/images/bg_anubis.png" alt="Deus Grego" />
-
-          </div> */}
           <div>
             <div className={styles.heroInsideContainer}>
               <div className={styles.heroTitleContainer}>
@@ -49,15 +42,15 @@ export function Hero() {
                   <div className={styles.divider1} />
                   <div
                     className={styles.buttonO}
-                    onFocus={() => setBgState('grego')}
-                    onMouseOver={() => setBgState('grego')}
+                    onFocus={() => setBgState('odin')}
+                    onMouseOver={() => setBgState('odin')}
                     onMouseLeave={() => setBgState('')}
                   >
-                    {bgState !== 'grego'
+                    {bgState !== 'odin'
                       ? (
                         <img
                           src="/images/O_big.svg"
-                          alt="Deus Grego"
+                          alt="o_hover"
                         />
                       ) : (
                         <div className={styles.linkHow}>
@@ -94,14 +87,12 @@ export function Hero() {
                             />
                           </a>
                         </div>
-
                       )}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
