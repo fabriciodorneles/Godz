@@ -25,7 +25,7 @@ export default function Home() {
       );
       const address = accounts.result[0];
       const signed_msg = await Web3Token.sign((msg) => web3.eth.personal.sign(msg, address, undefined), '1h');
-      const response = await fetch('api/user', {
+      const response = await fetch('api/getUser', {
         method: 'POST',
         body: JSON.stringify({
           signed_msg,
@@ -45,7 +45,7 @@ export default function Home() {
         setLoggedin(true);
       }
     } catch (error) {
-      alert('Please Install MetaMask Wallet');
+      alert('Metamask Error');
     }
   };
 

@@ -17,7 +17,6 @@ export default function Register() {
       const accounts = await window.ethereum.send(
         "eth_requestAccounts"
       )
-      console.log('accounts', accounts.result[0]);
       const address = accounts.result[0];
       const signed_msg = await Web3Token.sign(msg => web3.eth.personal.sign(msg, address), '1h');
       const response = await fetch('/api/register', {

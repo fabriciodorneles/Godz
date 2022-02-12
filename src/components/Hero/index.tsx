@@ -27,7 +27,7 @@ export function Hero() {
                     onMouseLeave={() => setBgState('')}
                   >
                     {bgState !== 'cernnunos'
-                      ? (<img src="/images/G_big.svg" alt="Cernnunos" />) : (
+                      ? (<img src="/images/G_big.svg" alt="g_hover" />) : (
                         <div className={styles.linkWhat}>
                           <a href="./what">
                             <img

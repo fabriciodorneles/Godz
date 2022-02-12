@@ -19,10 +19,8 @@ const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
 export default async function handler(req, res) {
   const clientIp = requestIp.getClientIp(req);
-  console.log('--> IP <-- ', clientIp);
   const {signed_msg, name, email, discord} = JSON.parse(req.body);
   const { address } = await Web3Token.verify(signed_msg);
-  console.log('Public Address Retrieved', address);
 
   try {
     // Find if has IP in database
@@ -31,7 +29,6 @@ export default async function handler(req, res) {
         Match(Index('user_by_ip_address'), clientIp)
       )
     )
-    console.log('userByIP', userByIp.clientIP);
     return res.status(202).json({ message: 'IP already registered.' });
   } catch (error) {
     if(error.name === 'NotFound') {

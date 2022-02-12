@@ -16,7 +16,6 @@ const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 export default async function handler(req, res) {
   const {signed_msg} = JSON.parse(req.body);
   const { address } = await Web3Token.verify(signed_msg);
-  console.log('Public Address Retrieved', address);
 
   try {
     // Find user
@@ -31,7 +30,6 @@ export default async function handler(req, res) {
   } catch (error) {
     // User not found. Ask to Register.
     if(error.name === 'NotFound') {
-      console.log('Não achou');
       return res.status(202).json({ message: 'User Not in database.' });
     }
 
