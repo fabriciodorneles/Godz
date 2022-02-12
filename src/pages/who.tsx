@@ -35,7 +35,11 @@ export default function Home() {
                 <p>
                   +10 years of xp in
                   <br />
-                  game and tech dev
+                  <a href="./85648646384">
+                    game
+                  </a>
+                  {' '}
+                  and tech dev
                 </p>
               </div>
               <div className={styles.neoTokyoWho}>

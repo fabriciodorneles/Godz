@@ -37,3 +37,8 @@ html, body, canvas {
 }
 
 
+@font-face {
+	font-family: 'lores21otserifregular';
+	src: url('fonts/lores21otserifregular.otf') format('opentype');
+}
+
