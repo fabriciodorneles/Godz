@@ -19,14 +19,24 @@ export function ProphetProfile() {
               </div>
             </div>
           </div>
-          <div className={styles.twitterContainer}>
+          <div className={styles.socialMediaContainer}>
             <a
               href="https://twitter.com/theprophetsgame"
               target="_blank"
               rel="noopener noreferrer"
+              className={styles.twitter}
             >
               <img src="./images/twitter_icon.svg" alt="twitter icon" />
               Follow @theprophetsgame
+            </a>
+            <a
+              href="https://discord.com/invite/godsgame"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.discord}
+            >
+              <img src="./images/discord.svg" alt="twitter icon" />
+              Join Godsgame Discord
             </a>
           </div>
         </div>
