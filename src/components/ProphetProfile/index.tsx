@@ -21,7 +21,7 @@ export function ProphetProfile() {
           </div>
           <div className={styles.socialMediaContainer}>
             <a
-              href="https://twitter.com/theprophetsgame"
+              href="https://twitter.com/GodsgameNFT"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.twitter}
