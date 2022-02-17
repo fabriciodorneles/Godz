@@ -67,7 +67,7 @@ export default function Home() {
         </nav>
       </header>
       <div className={styles.gameFrame}>
-        <iframe title="TopDown Shooter" src="jogos/index.html" width="335" height="500" scrolling="no" />
+        <iframe title="TopDown Shooter" src="jogos/index.html" width="800" height="450" scrolling="no" />
       </div>
       <div className={styles.gameFrame}>
         { !isLoggedin && !userNotRegistered

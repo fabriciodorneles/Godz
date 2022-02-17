@@ -1,10 +1,10 @@
 {
-	"name": "Godz",
-	"short_name": "Godz",
-	"description": "",
+	"name": "Dungeon Dodge",
+	"short_name": "Dungeon Dodge",
+	"description": "Casual Game",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "portrait",
+	"orientation": "landscape",
 	"background_color": "#ffffff",
 	"icons": [
 		{
