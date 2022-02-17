@@ -27,7 +27,7 @@ export function ProphetProfile() {
               className={styles.twitter}
             >
               <img src="./images/twitter_icon.svg" alt="twitter icon" />
-              Follow @theprophetsgame
+              Follow @GodsgameNFT
             </a>
             <a
               href="https://discord.com/invite/godsgame"
@@ -37,6 +37,14 @@ export function ProphetProfile() {
             >
               <img src="./images/discord.svg" alt="twitter icon" />
               Join Godsgame Discord
+            </a>
+            <a
+              href="./Gods_Whitepaper_v2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whitepaper}
+            >
+              White Paper
             </a>
           </div>
         </div>
