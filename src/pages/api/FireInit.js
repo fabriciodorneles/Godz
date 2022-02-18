@@ -3,8 +3,9 @@ import faunadb, { query as q } from 'faunadb';
 const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
 export default async function handler(req, res) {
-  const {highScore, authToken} = JSON.parse(req.body);
+  const {authToken} = JSON.parse(req.body);
 
+  console.log('--->token', authToken);
   const _response = await serverClient.query(
     q.Get(
       q.Select(['instance'], q.KeyFromSecret(authToken)),
@@ -15,5 +16,5 @@ export default async function handler(req, res) {
   })
   .catch((err) => console.error('Error: %s', err))
 
-  return res.status(200).json({ highScore: _response.data.highScore });
+  return res.status(200).json({ FireHit: _response.data.FireHit });
 }
