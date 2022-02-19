@@ -70,13 +70,13 @@ export default function Register() {
         {isLoggedin && (
           <>
             <div>Registration Successful</div>
-            <a href='./85648646384' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
+            <a href='./camacogame' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
           </>
           )}
         {ipAlreadyRegistered && (
           <>
             <div>IP já registrado. Apenas uma carteira por IP.</div>
-            <a href='./85648646384' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
+            <a href='./camacogame' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
           </>
           )}
       </main>

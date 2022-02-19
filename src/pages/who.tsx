@@ -17,8 +17,13 @@ export default function Home() {
       <div className={styles.mainContainer}>
         <div className={styles.setContainer}>
           <div className={styles.containerWho}>
-            <div>
-              <img src="/images/condz_marcacao.png" alt="Condz" />
+            <div className={styles.avatarContainer}>
+              <div className={styles.linkFire}>
+                <a href="./camacogame">
+                  <img src="/images/button.png" alt="" />
+                </a>
+              </div>
+              {/* <img src="/images/condz_marcacao.png" alt="Condz" /> */}
             </div>
             <div className={styles.infoWho}>
               <div className={styles.headerWho}>

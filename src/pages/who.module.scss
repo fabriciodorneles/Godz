@@ -32,6 +32,30 @@
   justify-content: center;
 }
 
+.linkFire {
+  padding-top: calc(104px/var(--scale));
+  padding-left: calc(23px/var(--scale));
+  a {
+    img {
+      width: calc(56px/var(--scale));
+      height: calc(38px/var(--scale));
+    }
+    &:hover {
+      filter: invert(95%) brightness(105%) contrast(105%);
+    }
+  }
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: left;
+  justify-content: start;
+  background-image: url(/images/condz_marcacao.png);
+  width:calc((592px)/var(--scale));
+  height:100%;
+  background-size: contain;
+}
+
 .setContainer {
   width:100%;
   display: flex;
