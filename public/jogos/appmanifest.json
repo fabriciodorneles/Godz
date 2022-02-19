@@ -1,10 +1,10 @@
 {
-	"name": "Godz",
-	"short_name": "Godz",
-	"description": "",
+	"name": "Athena Dungeon",
+	"short_name": "Athena Dungeon",
+	"description": "Casual Game",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "portrait",
+	"orientation": "landscape",
 	"background_color": "#ffffff",
 	"icons": [
 		{
