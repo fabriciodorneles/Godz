@@ -19,7 +19,6 @@ export default async function handler(req, res) {
     return ret
   })
   .catch((err) => console.error('Error: %s', err))
-  console.log('O HighScore é', FireHit);
-  return res.status(200).json({ message: 'O High Score é'+ FireHit});
+  return res.status(200).json({ message: 'Hey hacker gods are watching you!!'});
 }
 
