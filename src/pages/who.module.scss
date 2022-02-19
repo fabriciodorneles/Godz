@@ -49,7 +49,7 @@
 .avatarContainer {
   display: flex;
   align-items: left;
-  justify-content: start;
+  justify-content: flex-start;
   background-image: url(/images/condz_marcacao.png);
   width:calc((592px)/var(--scale));
   height:100%;

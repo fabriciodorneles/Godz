@@ -1,7 +1,7 @@
 {
 	"name": "Athena Dungeon",
 	"short_name": "Athena Dungeon",
-	"description": "Casual Game",
+	"description": "Survive the gods trials",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "landscape",
