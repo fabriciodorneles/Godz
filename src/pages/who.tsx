@@ -18,7 +18,7 @@ export default function Home() {
         <div className={styles.setContainer}>
           <div className={styles.containerWho}>
             <div className={styles.avatarContainer}>
-              {/* <img src="/images/condz_marcacao.png" alt="Condz" /> */}
+              {/* <img src="/images/condz_marcacao.png" alt="Condz " /> */}
             </div>
             <div className={styles.infoWho}>
               <div className={styles.headerWho}>
