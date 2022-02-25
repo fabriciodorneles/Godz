@@ -38,14 +38,14 @@ export function ProphetProfile() {
               <img src="./images/discord.svg" alt="twitter icon" />
               Join Godsgame Discord
             </a>
-            <a
+            {/* <a
               href="./Gods_Whitepaper_v2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.whitepaper}
             >
               White Paper
-            </a>
+            </a> */}
           </div>
         </div>
         <div className={styles.text}>
