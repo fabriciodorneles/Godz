@@ -12,8 +12,9 @@ export default async function handler(req, res) {
   )
   .then((ret) => {
     return ret
-  })
+  }) 
   .catch((err) => console.error('Error: %s', err))
+  console.log('response ', _response);
 
-  return res.status(200).json({ FireHit: _response.data.FireHit });
+  return res.status(200).json({ planetRun: _response.data.planetRun });
 }

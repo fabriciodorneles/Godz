@@ -1,5 +1,6 @@
 .headerContainer {
-    height: var(--header-height);
+    height: calc(var(--header-height) - 51px/var(--scale-buttons));
+    // height: var(--header-height);
     display: flex;
     align-items: flex-end;
     justify-content: center;
