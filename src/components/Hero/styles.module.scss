@@ -127,4 +127,27 @@
   align-content: center;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-left: 22px;
+  padding-top: 20px;
+}
+
+.whitepaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #232323;
+  color: black;
+  font-size: calc(36px/var(--scale));
+  padding: calc(8px/var(--scale)) calc(40px/var(--scale));
+  border-radius: calc(30px/var(--scale));
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
 
