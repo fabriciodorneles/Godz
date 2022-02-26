@@ -41,6 +41,11 @@
   align-items: center;
   font-weight: bold;
   font-size: calc(48px/var(--scale));
+  a {
+    &:hover {
+      filter: invert(100%) brightness(65%) contrast(200%);
+    }
+  }
   img {
     margin-left: calc(8px/var(--scale));
     width: calc(31px/var(--scale));

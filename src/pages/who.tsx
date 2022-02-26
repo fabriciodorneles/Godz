@@ -19,7 +19,7 @@ export default function Home() {
           <div className={styles.containerWho}>
             <div className={styles.avatarContainer}>
               <div className={styles.linkFire}>
-                <a href="./camacogame">
+                <a href="./r3h5yc9tf7t9pv2">
                   <img src="/images/button.png" alt="" />
                 </a>
               </div>

@@ -99,7 +99,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className={styles.whitepaper}
               >
-                White Paper
+                Gods Parchment
               </a>
             </div>
           </div>
