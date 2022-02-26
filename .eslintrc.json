@@ -25,6 +25,7 @@
     ],
     "rules": {
       "camelcase":"off",
+      "linebreak-style": 0,
       "padded-blocks":"warn",
       "react-in-jsx-scope": "off",
       "react-hooks/rules-of-hooks": "error",
