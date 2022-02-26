@@ -18,12 +18,7 @@ export default function Home() {
         <div className={styles.setContainer}>
           <div className={styles.containerWho}>
             <div className={styles.avatarContainer}>
-              <div className={styles.linkFire}>
-                <a href="./r3h5yc9tf7t9pv2">
-                  <img src="/images/button.png" alt="" />
-                </a>
-              </div>
-              {/* <img src="/images/condz_marcacao.png" alt="Condz" /> */}
+              <img src="/images/condz_marcacao.png" alt="Condz" />
             </div>
             <div className={styles.infoWho}>
               <div className={styles.headerWho}>
@@ -40,7 +35,10 @@ export default function Home() {
                 <p>
                   +10 years of xp in
                   <br />
-                  game
+                  <a href="./85648646384">
+                    game
+                  </a>
+                  {' '}
                   and tech dev
                 </p>
               </div>

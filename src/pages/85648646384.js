@@ -67,7 +67,7 @@ export default function Home() {
         </nav>
       </header>
       <div className={styles.gameFrame}>
-        <iframe title="Wukong's Travels" src="jogos/index.html" width="450" height="500" scrolling="no" />
+        <iframe title="Wukong's Travels" src="jogos/index.html" width="335" height="500" scrolling="no" />
       </div>
       <div className={styles.gameFrame}>
         { !isLoggedin && !userNotRegistered
