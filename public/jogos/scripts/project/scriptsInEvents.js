@@ -21,7 +21,7 @@ const scriptsInEvents = {
 			}
 		},
 
-		async EventMenu_Event3_Act1(runtime, localVars)
+		async EventMenu_Event4_Act1(runtime, localVars)
 		{
 			if (Cookies.get('fauna-auth')) {
 			runtime.globalVars.AuthToken = Cookies.get('fauna-auth');
@@ -31,7 +31,7 @@ const scriptsInEvents = {
 			
 		},
 
-		async EventMenu_Event5_Act1(runtime, localVars)
+		async EventMenu_Event6_Act1(runtime, localVars)
 		{
 			await fetch('/api/FireInit', {
 				method: 'POST',
@@ -45,7 +45,7 @@ const scriptsInEvents = {
 			})
 		},
 
-		async EventMenu_Event6_Act4(runtime, localVars)
+		async EventMenu_Event7_Act4(runtime, localVars)
 		{
 			runtime.objects.planetText.getFirstInstance().text =`[outline=#000000]BEST: ${runtime.globalVars.planetRun}[/outline]`;
 			const response = await fetch('/api/FireHit', {
@@ -59,7 +59,7 @@ const scriptsInEvents = {
 			console.log("-->", response)
 		},
 
-		async EventMenu_Event7_Act1(runtime, localVars)
+		async EventMenu_Event8_Act1(runtime, localVars)
 		{
 			runtime.objects.planetText.getFirstInstance().text =`[outline=#000000]BEST: ${runtime.globalVars.planetRun}[/outline]`;
 		}
