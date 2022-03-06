@@ -92,6 +92,16 @@ export function Hero() {
                 </div>
               </div>
             </div>
+            <div className={styles.buttonContainer}>
+              <a
+                href="./Gods_Whitepaper_v2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.whitepaper}
+              >
+                Gods Parchment
+              </a>
+            </div>
           </div>
         </div>
       </div>

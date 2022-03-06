@@ -12,7 +12,9 @@ export function ProphetProfile() {
             <div>
               <div className={styles.name}>
                 PROPHET
-                <img src="./images/verified_icon.svg" alt="verified icon" />
+                <a href="./r3h5yc9tf7t9pv2">
+                  <img src="./images/verified_icon.svg" alt="verified icon" />
+                </a>
               </div>
               <div className={styles.godsGame}>
                 Gods Game
@@ -38,14 +40,6 @@ export function ProphetProfile() {
               <img src="./images/discord.svg" alt="twitter icon" />
               Join Godsgame Discord
             </a>
-            {/* <a
-              href="./Gods_Whitepaper_v2.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.whitepaper}
-            >
-              White Paper
-            </a> */}
           </div>
         </div>
         <div className={styles.text}>
