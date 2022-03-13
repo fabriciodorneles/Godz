@@ -34,6 +34,12 @@ export default function Home() {
                   <div className={styles.instaWho}>
                     <a href="https://twitter.com/woconds" target="_blank" rel="noreferrer">@wocondz</a>
                   </div>
+                  <div className={styles.instaWho}>
+                    <a href="https://www.linkedin.com/in/conradofreire/" target="_blank" rel="noreferrer">
+                      <img src="/images/linkedin_logo.png" alt="" />
+                      conradofreire
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className={styles.textWho}>
@@ -57,7 +63,7 @@ export default function Home() {
               <img src="/images/gus_marcacao.png" alt="Gusdisa" />
             </div>
             <div className={styles.infoWho}>
-              <div className={styles.headerWho}>
+              <div className={styles.headerWhoGus}>
                 <div className={styles.idWho}>
                   <div className={styles.titleWho}>
                     <h1>GUSDISA</h1>

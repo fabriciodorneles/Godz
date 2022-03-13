@@ -81,6 +81,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: calc(5px/var(--scale)) 0px;
+  background: white;
+}
+
+.headerWhoGus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: calc(15px/var(--scale)) 0px;
   background: white;
 }
@@ -105,8 +113,17 @@
   padding-left: calc(30px/var(--scale));
 
   a {
+    display: flex;
+    align-items: center;
     font-size: calc(32px/var(--scale));
     color: #6B6B6B;
+
+    img {
+      
+      margin-right:calc(5px/var(--scale));
+      width:calc(35px/var(--scale));
+      height:calc(35px/var(--scale));
+    }
 
     &:hover {
       filter: invert(10%) brightness(105%) contrast(105%);
