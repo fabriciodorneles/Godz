@@ -12,9 +12,7 @@ export function ProphetProfile() {
             <div>
               <div className={styles.name}>
                 PROPHET
-                <a href="./r3h5yc9tf7t9pv2">
-                  <img src="./images/verified_icon.svg" alt="verified icon" />
-                </a>
+                <img src="./images/verified_icon.svg" alt="verified icon" />
               </div>
               <div className={styles.godsGame}>
                 Gods Game
