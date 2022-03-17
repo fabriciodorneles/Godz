@@ -67,7 +67,7 @@ export default function Home() {
         </nav>
       </header>
       <div className={styles.gameFrame}>
-        <iframe title="Wukong's Travels" src="jogo3/index.html" width="450" height="500" scrolling="no" />
+        <iframe title="Athena's Dungeon" src="jogo2/index1.html" width="800" height="450" scrolling="no" />
       </div>
       <div className={styles.gameFrame}>
         { !isLoggedin && !userNotRegistered

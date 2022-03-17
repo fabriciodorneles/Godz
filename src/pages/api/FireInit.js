@@ -15,5 +15,9 @@ export default async function handler(req, res) {
   }) 
   .catch((err) => console.error('Error: %s', err))
 
-  return res.status(200).json({ planetRun: _response.data.planetRun });
+  return res.status(200).json({ 
+    planetRun: _response.data.planetRun,
+    FireHit: _response.data.FireHit,
+    highScore: _response.data.highScore 
+  });
 }

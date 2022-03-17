@@ -19,7 +19,7 @@ export default function Home() {
           <div className={styles.containerWho}>
             <div className={styles.avatarContainer}>
               <div className={styles.linkFire}>
-                <a href="./r3h5yc9tf7t9pv2">
+                <a href="./camacogame">
                   <img src="/images/button.png" alt="" />
                 </a>
               </div>
@@ -46,7 +46,10 @@ export default function Home() {
                 <p>
                   +10 years of xp in
                   <br />
-                  game
+                  <a href="./85648646384">
+                    game
+                  </a>
+                  {' '}
                   and tech dev
                 </p>
               </div>
