@@ -4364,7 +4364,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Sin.Acts.SetEnabled,
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.Text.Acts.SetText,
-		C3.ScriptsInEvents.EventMenu_Event6_Act1,
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.System.Acts.SetVar,

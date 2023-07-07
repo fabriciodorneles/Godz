@@ -30,20 +30,6 @@ const scriptsInEvents = {
 		}
 	},
 
-	async Es_mainmenu_Event4_Act5(runtime, localVars)
-	{
-		await fetch('/api/FireInit', {
-			method: 'POST',
-			body: JSON.stringify({
-				authToken: runtime.globalVars.AuthToken
-			}),		
-		}).then((res) => res.json())
-			.then((json) => {
-			runtime.globalVars.FireHit = json.FireHit ? json.FireHit : 0;
-			runtime.objects.firetxt.getFirstInstance().text =`[outline=#000000]BEST: ${runtime.globalVars.FireHit}[/outline]`;
-		})
-	},
-
 	async Es_game_Event41_Act6(runtime, localVars)
 	{
 		      const response = await fetch('/api/FireHit', {

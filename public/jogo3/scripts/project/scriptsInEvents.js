@@ -31,20 +31,6 @@ const scriptsInEvents = {
 		
 	},
 
-	async EventMenu_Event6_Act1(runtime, localVars)
-	{
-		await fetch('/api/FireInit', {
-			method: 'POST',
-			body: JSON.stringify({
-				authToken: runtime.globalVars.AuthToken
-			}),		
-		}).then((res) => res.json())
-			.then((json) => {
-			runtime.globalVars.planetRun = json.planetRun ? json.planetRun : 0;
-			runtime.objects.planetText.getFirstInstance().text =`[outline=#000000][lineThickness=0.6]BEST: ${runtime.globalVars.planetRun}[/lineThickness][/outline]`;
-		})
-	},
-
 	async EventMenu_Event7_Act4(runtime, localVars)
 	{
 		runtime.objects.planetText.getFirstInstance().text =`[outline=#000000][lineThickness=0.6]BEST: ${runtime.globalVars.planetRun}[/lineThickness][/outline]`;

@@ -4343,7 +4343,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.Text.Acts.SetText,
-		C3.ScriptsInEvents.Menuevent_Event6_Act7,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,

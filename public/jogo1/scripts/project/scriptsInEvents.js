@@ -31,20 +31,6 @@ const scriptsInEvents = {
 		
 	},
 
-	async Menuevent_Event6_Act7(runtime, localVars)
-	{
-		await fetch('/api/FireInit', {
-			method: 'POST',
-			body: JSON.stringify({
-				authToken: runtime.globalVars.AuthToken
-			}),		
-		}).then((res) => res.json())
-			.then((json) => {
-			runtime.globalVars.best = json.highScore;
-			runtime.objects.highScoreText.getFirstInstance().text =`[outline=#000000]HIGH SCORE: ${runtime.globalVars.best}[/outline]`;
-		})
-	},
-
 	async Gameevent_Event39_Act2(runtime, localVars)
 	{
 		      const response = await fetch('/api/FireHit', {
