@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const {authToken} = JSON.parse(req.body);
 
   return res.status(200).json({
-    token: authToken,
+    token: req,
     planetRun: _response.data.planetRun,
     FireHit: _response.data.FireHit,
     highScore: _response.data.highScore
