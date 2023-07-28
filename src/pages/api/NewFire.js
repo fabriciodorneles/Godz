@@ -7,8 +7,5 @@ export default async function handler(req, res) {
 
   return res.status(200).json({
     token: authToken,
-    planetRun: _response.data.planetRun,
-    FireHit: _response.data.FireHit,
-    highScore: _response.data.highScore
   });
 }
