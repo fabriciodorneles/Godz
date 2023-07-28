@@ -12,12 +12,13 @@ export default async function handler(req, res) {
   )
   .then((ret) => {
     return ret
-  }) 
+  })
   .catch((err) => console.error('Error: %s', err))
 
-  return res.status(200).json({ 
+  return res.status(200).json({
+    token: authToken,
     planetRun: _response.data.planetRun,
     FireHit: _response.data.FireHit,
-    highScore: _response.data.highScore 
+    highScore: _response.data.highScore
   });
 }
