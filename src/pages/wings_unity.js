@@ -22,6 +22,7 @@ export default function Home() {
     const authToken = Cookies.get('fauna-auth');
     if (authToken) {
       setLoggedin(true);
+      handleClickSpawnEnemies(authToken)
     }
   }, []);
 
