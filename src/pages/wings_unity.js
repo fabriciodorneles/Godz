@@ -4,10 +4,19 @@ import { useEffect, useState } from 'react';
 import Web3 from 'web3';
 import Web3Token from 'web3-token';
 import styles from './game1.module.scss';
+import { Unity, useUnityContext } from "react-unity-webgl";
 
 export default function Home() {
   const [isLoggedin, setLoggedin] = useState(false);
   const [userNotRegistered, setUserNotRegistered] = useState(false);
+
+  const unityContentLocation = "jogo5/Build";
+  const { unityProvider, sendMessage } = useUnityContext({
+      loaderUrl: `${unityContentLocation}/web.loader.js`,
+      dataUrl: `${unityContentLocation}/web.data`,
+      frameworkUrl: `${unityContentLocation}/web.framework.js`,
+      codeUrl: `${unityContentLocation}/web.wasm`,
+  });
 
   useEffect(() => {
     const authToken = Cookies.get('fauna-auth');
@@ -16,7 +25,12 @@ export default function Home() {
     }
   }, []);
 
+  function handleClickSpawnEnemies(token) {
+    sendMessage("KeyManager", "SpawnEnemies", token);
+  }
+
   const login = async () => {
+    // handleClickSpawnEnemies('OIAOISOSI')
     const web3 = new Web3(window.ethereum);
 
     try {
@@ -42,6 +56,7 @@ export default function Home() {
         const { token } = await response.json();
         const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
         Cookies.set('fauna-auth', token, { expires: one_hour });
+        handleClickSpawnEnemies(token)
         setLoggedin(true);
       }
     } catch (error) {
@@ -67,7 +82,7 @@ export default function Home() {
         </nav>
       </header>
       <div className={styles.gameFrame}>
-        <iframe title="Wukong's Travels" src="jogo5/index.html" width="335" height="500" scrolling="no" />
+        <Unity style={{width:"280px",height:"500px"}} unityProvider={unityProvider} />
       </div>
       <div className={styles.gameFrame}>
         { !isLoggedin && !userNotRegistered
