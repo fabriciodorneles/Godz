@@ -22,16 +22,16 @@ export default function Home() {
     const authToken = Cookies.get('fauna-auth');
     if (authToken) {
       setLoggedin(true);
-      handleClickSpawnEnemies(authToken)
+      handleClickSignMetamask(authToken)
     }
   }, []);
 
-  function handleClickSpawnEnemies(token) {
-    sendMessage("KeyManager", "SpawnEnemies", token);
+  function handleClickSignMetamask(token) {
+    sendMessage("KeyManager", "MetamaskSign", token);
   }
 
   const login = async () => {
-    // handleClickSpawnEnemies('OIAOISOSI')
+    // handleClickSignMetamask('OIAOISOSI')
     const web3 = new Web3(window.ethereum);
 
     try {
@@ -57,7 +57,7 @@ export default function Home() {
         const { token } = await response.json();
         const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
         Cookies.set('fauna-auth', token, { expires: one_hour });
-        handleClickSpawnEnemies(token)
+        handleClickSignMetamask(token)
         setLoggedin(true);
       }
     } catch (error) {
