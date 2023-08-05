@@ -12,10 +12,10 @@ export default function Home() {
 
   const unityContentLocation = "jogo5/Build";
   const { unityProvider, sendMessage } = useUnityContext({
-      loaderUrl: `${unityContentLocation}/web.loader.js`,
-      dataUrl: `${unityContentLocation}/web.data`,
-      frameworkUrl: `${unityContentLocation}/web.framework.js`,
-      codeUrl: `${unityContentLocation}/web.wasm`,
+      loaderUrl: `${unityContentLocation}/jogo5.loader.js`,
+      dataUrl: `${unityContentLocation}/jogo5.data`,
+      frameworkUrl: `${unityContentLocation}/jogo5.framework.js`,
+      codeUrl: `${unityContentLocation}/jogo5.wasm`,
   });
 
   useEffect(() => {
