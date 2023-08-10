@@ -67,13 +67,13 @@ export default function Register() {
         {isRegisterOK && (
           <>
             <div>Registration Successful</div>
-            <a href='./r3h5yc9tf7t9pv2' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
+            <a href='./wings_unity' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
           </>
           )}
         {ipAlreadyRegistered && (
           <>
             <div>IP já registrado. Apenas uma carteira por IP.</div>
-            <a href='./r3h5yc9tf7t9pv2' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
+            <a href='./wings_unity' className={styles.buttonRegistered}><div>&lt;</div>{' '}Back to Game</a>
           </>
           )}
       </main>
