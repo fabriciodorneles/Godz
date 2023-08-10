@@ -27,11 +27,10 @@ export default function Home() {
   }, []);
 
   function handleClickSignMetamask(token) {
-    sendMessage("KeyManager", "MetamaskSign", token);
+    sendMessage("ApiManager", "MetamaskSign", token);
   }
 
   const login = async () => {
-    // handleClickSignMetamask('OIAOISOSI')
     const web3 = new Web3(window.ethereum);
 
     try {
@@ -54,12 +53,12 @@ export default function Home() {
       if (response.status === 202) {
         setUserNotRegistered(true);
       } else {
-        const { token } = await response.json();
-        const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
-        Cookies.set('fauna-auth', token, { expires: one_hour });
-        handleClickSignMetamask(token)
+        handleClickSignMetamask(signed_msg);
+        // const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
+        // Cookies.set('fauna-auth', signed_msg, { expires: one_hour });
         setLoggedin(true);
       }
+
     } catch (error) {
       alert('Metamask Error');
     }
@@ -102,9 +101,9 @@ export default function Home() {
               <img src="/images/redLight.svg" alt="red light" />
             </button>
             <p>
-              Just click
+              Click
               {' '}
-              <a href="register">here</a>
+              <a href="registerConfirm">here</a>
               {' '} to register
             </p>
           </>

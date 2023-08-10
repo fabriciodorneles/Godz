@@ -20,6 +20,10 @@ console.log('0', receivedData);
     DataForServer = {highScore:receivedData?.highScore}
     console.log('3', DataForServer);
   }
+  if (receivedData?.wingsFly) {
+    DataForServer = {wingsFly:receivedData?.wingsFly}
+    console.log('3', DataForServer);
+  }
 
   const olha = await serverClient.query(
     q.Update(

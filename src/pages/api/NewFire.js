@@ -16,7 +16,6 @@ export default async function handler(req, res) {
   .catch((err) => console.error('Error: %s', err))
 
   return res.status(200).json({
-    token: authToken,
-    planetRun: _response.data.planetRun,
+    wingsFly: _response.data.wingsFly || 0,
   });
 }
