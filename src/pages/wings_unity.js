@@ -38,11 +38,11 @@ export default function Home() {
         'eth_requestAccounts',
       );
       const address = accounts.result[0];
-      const signed_msg = await Web3Token.sign((msg) => web3.eth.personal.sign(msg, address, undefined), '1h');
-      const response = await fetch('api/getUser', {
+      const msg = await Web3Token.sign((msg) => web3.eth.personal.sign(msg, address, undefined), '1h');
+      const response = await fetch('api/confirmUser', {
         method: 'POST',
         body: JSON.stringify({
-          signed_msg,
+          msg,
         }),
       });
 
@@ -53,7 +53,7 @@ export default function Home() {
       if (response.status === 202) {
         setUserNotRegistered(true);
       } else {
-        handleClickSignMetamask(signed_msg);
+        handleClickSignMetamask(msg);
         // const one_hour = new Date(new Date().getTime() + 3600 * 1000); // sign token for 1 hour
         // Cookies.set('fauna-auth', signed_msg, { expires: one_hour });
         setLoggedin(true);

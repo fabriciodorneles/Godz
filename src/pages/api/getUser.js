@@ -10,13 +10,15 @@ import faunadb, {
   Tokens,
   Ref
 } from 'faunadb';
+import { decrypt, encrypt } from './EncryptLogic';
 
 const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
-console.log('---> secret: ', process.env.FAUNA_SECRET );
-
 export default async function handler(req, res) {
-  const {signed_msg} = JSON.parse(req.body);
+  const {message} = JSON.parse(req.body);
+  const key = "YFpoGQ@$VrUMf64tZ9eg^RiaQSZ^Pw%*";
+  const decrypted = decrypt(message, key)
+  const {signed_msg} = JSON.parse(decrypted);
   const { address } = await Web3Token.verify(signed_msg);
   try {
     // Find user
@@ -26,7 +28,8 @@ export default async function handler(req, res) {
         )
       )
     const accessToken = await createAccessToken(user.ref.id, 3600);
-    res.status(200).json({ token: accessToken.secret });
+    const msg = encrypt(JSON.stringify({ token: accessToken.secret }), key);
+    res.status(200).json({ message: msg });
 
   } catch (error) {
     // User not found. Ask to Register.

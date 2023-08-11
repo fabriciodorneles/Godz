@@ -13,11 +13,9 @@ import faunadb, {
 
 const serverClient = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
-console.log('---> secret: ', process.env.FAUNA_SECRET );
-
 export default async function handler(req, res) {
-  const {signed_msg} = JSON.parse(req.body);
-  const { address } = await Web3Token.verify(signed_msg);
+  const {msg} = JSON.parse(req.body);
+  const { address } = await Web3Token.verify(msg);
   try {
     // Find user
     const user = await serverClient.query(
