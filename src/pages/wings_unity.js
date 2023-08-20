@@ -72,17 +72,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Godz</title>
+        <title>Mega Game</title>
       </Head>
-      <header className={styles.headerContainer}>
-        <nav>
-          <a href="./how">
-            {/* <img src="/images/question_icon.svg" alt="ig.news" /> */}
-          </a>
-        </nav>
-      </header>
       <div className={styles.gameFrame}>
-        <Unity style={{width:"280px",height:"500px"}} unityProvider={unityProvider} />
+        <Unity style={{width:"410px",height:"780px"}} unityProvider={unityProvider} />
       </div>
       <div className={styles.gameFrame}>
         { !isLoggedin && !userNotRegistered
