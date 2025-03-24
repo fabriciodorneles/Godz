@@ -21,15 +21,18 @@ Visit the live application at [https://godz-two.vercel.app/](https://godz-two.ve
 ## Hidden Games
 
 ### 1. Wukong's Travel
-![Wukong's Travel](public/readme/image2.png)
+![Wukong's Travel](public/readme/image2.png)  
+
 Access at: https://godz-two.vercel.app/r3h5yc9tf7t9pv2
 
 ### 2. Athena's Dungeon
-![Athena's Dungeon](public/readme/image3.png)
+![Athena's Dungeon](public/readme/image3.png)  
+
 Access at: https://godz-two.vercel.app/camacogame
 
 ### 3. Godz Wings
-![Godz Wings](public/readme/image4.png)
+![Godz Wings](public/readme/image4.png)  
+
 Access at: https://godz-two.vercel.app/85648646384
 
 ## Technology Stack
