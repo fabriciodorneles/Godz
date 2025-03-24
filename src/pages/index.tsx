@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Godz</title>
+        <title>Godz Game</title>
       </Head>
       <Hero />
     </>
