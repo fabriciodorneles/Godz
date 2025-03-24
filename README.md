@@ -4,7 +4,7 @@
 
 ## About
 
-Godz is a blockchain-based gaming platform that features monthly game releases where players can compete for prizes. The platform integrates with Web3 technology through MetaMask wallet connection and rewards top performers.
+Godz was a blockchain-based gaming platform launched in 2023. This is the launching website, that features monthly game releases where players can compete for prizes. The platform integrates with Web3 technology through MetaMask wallet connection and rewards top performers.
 
 ## Live Demo
 
@@ -19,6 +19,9 @@ Visit the live application at [https://godz-two.vercel.app/](https://godz-two.ve
 - Hidden mini-games for players to discover
 
 ## Hidden Games
+The game where hidden in the pages sites.
+Here is the links if you don't want to search.
+The metamask login is not needed anymore.
 
 ### 1. Wukong's Travel
 ![Wukong's Travel](public/readme/image2.png)  
